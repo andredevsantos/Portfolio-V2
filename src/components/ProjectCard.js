@@ -1,5 +1,7 @@
 import './ProjectCard.scss'
 import arcadeSrc from '../resources/arcade.png'
+import { FaExternalLinkAlt } from 'react-icons/fa';
+import { IconContext } from "react-icons";
 
 const ProjectCard = (props) => {
     let description = '';
@@ -21,7 +23,9 @@ const ProjectCard = (props) => {
                     <li>Wordpress</li>
                     <li>PHP</li>
                 </ul>
-                <small>arcadesports.io</small>
+                <IconContext.Provider value={{ color: "#bdbdbd" }}>
+                    <small>arcadesports.io <FaExternalLinkAlt /></small>
+                </IconContext.Provider>
             </div>
         </div>
     )

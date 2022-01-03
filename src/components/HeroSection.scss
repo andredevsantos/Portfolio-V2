@@ -2,7 +2,7 @@
 
 .hero-section {
     width: 100%;
-    max-width: 1450px;
+    max-width: 1375px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -35,9 +35,11 @@
     }
 
     .computer {
-        max-width: 750px;
+        max-width: 520px;
+        overflow: hidden;
 
         canvas {
+            transform: scale(1.4);
             transition: 0.5s;
             width: 100%;
             height: auto;
@@ -45,7 +47,7 @@
                 transform: scale(1.2);
             }
             &:hover {
-                transform: scale(1.02);
+                // transform: scale(1.42);
             }
         }
     }

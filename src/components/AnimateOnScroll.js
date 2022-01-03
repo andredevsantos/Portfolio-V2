@@ -30,7 +30,6 @@ const ImageCanvas = ({ scrollHeight, numFrames, width, height }) => {
         if (index <= 0 || index > numFrames) {
             return;
         }
-
         setFrameIndex(index);
     };
 

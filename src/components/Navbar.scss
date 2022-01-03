@@ -9,7 +9,7 @@
     }
   }
   @mixin top-reveal {
-    @include animate(top-reveal, 0.1s, 1, normal);
+    @include animate(top-reveal, 0.1s, 1, normal, ease);
   }
 
 .nav {

@@ -30,7 +30,7 @@ $breakpoint-xxl: 1400px;
     }
   }
   
-  @mixin animate($name, $duration, $iteration, $direction) {
+  @mixin animate($name, $duration, $iteration, $direction, $timingfunction) {
     -webkit-animation-duration: $duration;
        -moz-animation-duration: $duration;
          -o-animation-duration: $duration;
@@ -47,4 +47,8 @@ $breakpoint-xxl: 1400px;
        -moz-animation-direction: $direction;
          -o-animation-direction: $direction;
             animation-direction: $direction;
+    -webkit-animation-timing-function: $timingfunction;
+       -moz-animation-timing-function: $timingfunction;
+         -o-animation-timing-function: $timingfunction;
+            animation-timing-function: $timingfunction;
   }

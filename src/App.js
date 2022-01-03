@@ -2,6 +2,7 @@ import './App.scss';
 import HeroSection from './components/HeroSection';
 import ProjectsSection from './components/ProjectsSection';
 import Navbar from './components/Navbar';
+import AboutSection from './components/AboutSection';
 
 const projects = [
   {
@@ -15,13 +16,13 @@ const projects = [
   }
 ]
 
-
 const App = () => {
   return (
     <div className="App">
       <Navbar />
       <HeroSection />
       <ProjectsSection projects={projects} />
+      <AboutSection />
     </div>
   );
 }

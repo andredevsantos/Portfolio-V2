@@ -6,7 +6,7 @@ html {font-size: 100%; overflow-x: hidden; max-width: 100%; color: $primary-whit
 
 body {
   background: $dark-blue;
-  //background-image: url('./resources/stardust.png');
+  background-image: url('./resources/stardust.png');
   background-size: 800px;
   //background-color: $dark-blue;
   margin: 0;
@@ -26,12 +26,12 @@ button {
 }
 
 p,span {
-  margin-bottom: 1rem;
+  margin-bottom: 0.938rem;
 }
 
 span {font-size: inherit;}
 
-p { font-size: 1.125rem; }
+p { font-size: 1.125rem; color:$secondary-white; line-height: 1.5;}
 
 h1, h2, h3, h4, h5 {
   margin: 3rem 0 1.38rem;
@@ -84,3 +84,14 @@ body { counter-reset: section;}
   display: flex;
   justify-content: center;
 }
+
+.section {
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+// * {
+//   outline: 1px solid #f00 !important;
+// }

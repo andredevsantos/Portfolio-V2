@@ -1,5 +1,20 @@
 @import '../variables';
 
+@include keyframes(floating) {
+    0% {
+        transform: translateY(-1%);
+    }
+    50% {
+        transform: translateY(1%);
+    }
+    100% {
+        transform: translateY(-1%);
+    }
+  }
+  @mixin floating {
+    @include animate(floating, 4s, infinite, normal, ease-in-out);
+  }
+
 .project-card {
     display: flex;
     max-width: 100%;
@@ -8,9 +23,20 @@
     @media (max-width: $breakpoint-lg) {
         justify-content: center;
     }
+
+}
+
+@for $i from 1 through 10 {
+    .projects-section .project-card:nth-child(#{$i}n) {
+        .project-card-thumbnail {
+            animation-delay: #{$i * 1}s;
+        }
+    }
 }
 
 .project-card-thumbnail {
+    @include floating;
+
     // width: 600px;
     max-width: 750px;
     img {
@@ -29,6 +55,9 @@
 }
 
 .project-card-text {
+    @media (min-width: $breakpoint-lg) {
+        
+    }
     height: min-content;
     position: absolute;
     bottom: 110px;
