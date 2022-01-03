@@ -1,0 +1,88 @@
+@import '../variables';
+
+@include keyframes(top-reveal) {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+  }
+  @mixin top-reveal {
+    @include animate(top-reveal, 0.1s, 1, normal);
+  }
+
+.nav {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+    height: auto;
+    max-height: 70px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    counter-reset: link;
+    transition: 0.1s;
+    
+    .navbar-logo {
+        height: 100%;
+
+        img {
+            width: auto;
+            height: 100%;
+            max-height: 40px;
+        }
+    }
+
+    .navbar-links {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        align-items: center;
+        margin: 0;
+        
+        li {
+            &::before {
+                counter-increment: link;
+                content: "0" counter(link) ". ";
+                color: $primary-blue;
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
+            margin: 0 20px;
+            font-size: 0.93rem;
+            color: $secondary-white;
+        }
+
+        ul {
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        button {
+            margin-left: 20px;
+            height: fit-content;
+            border-radius: 0.5rem;
+            padding: 10px 13px;
+            background: none;
+            border: 2px solid $primary-blue;
+            color: $primary-blue;
+            font-weight: medium;
+            font-size: 0.93rem;
+        }
+    }
+}
+
+.scrollNav {
+    @include top-reveal;
+    position: fixed;
+    background: rgba($dark-blue, 0.8);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 10px 17px -11px #00000069;
+    transition: 0.25s;
+    padding: 20px 40px;
+}
