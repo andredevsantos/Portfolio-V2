@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
     return (
         <FadeInWhenVisible>
-            <div className="about-section section">
+            <div id="about" className="about-section section">
                 <SectionTitle>A little more about me</SectionTitle>
                 <div className='about-section-content flex-horizontal'>
                     {/* <FadeInWhenVisible> */}

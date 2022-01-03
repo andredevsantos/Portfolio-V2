@@ -1,6 +1,7 @@
 import logo from '../resources/my-logo.png'
 import './Navbar.scss'
 import StickyNav from './StickyNavbar'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const Navbar = () => {
     return (
@@ -10,9 +11,9 @@ const Navbar = () => {
                     <img src={logo} alt="André Santos logo" />
                 </div>
                 <ul className="navbar-links">
-                    <li>Projects</li>
-                    <li>About me</li>
-                    <li>Contact</li>
+                    <AnchorLink href='#projects'><li>Projects</li></AnchorLink>
+                    <AnchorLink href='#about'><li>About me</li></AnchorLink>
+                    <AnchorLink href='#projects'><li>Contact</li></AnchorLink>
                     <button className="navbar-button">Resume</button>
                 </ul>
             </StickyNav>

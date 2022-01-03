@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const ProjectsSection = () => {
     return (
-        <div className="projects-section section">
+        <div id="projects" className="projects-section section">
             <FadeInWhenVisible>
                 <SectionTitle>Projects</SectionTitle>
             </FadeInWhenVisible>

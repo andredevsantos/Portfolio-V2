@@ -1,0 +1,30 @@
+@import '../variables';
+
+footer {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem auto;
+    .footer-logo {
+        margin: 1rem 0;
+        max-width: 50px;
+        img {
+            width: 100%;
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+        li {
+            display: inline;
+            margin: 1rem;
+            font-size: 1.5rem;            
+            a {
+                color: $primary-blue;
+            }
+        }
+    }
+}

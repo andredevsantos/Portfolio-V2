@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import ProjectsSection from './components/ProjectsSection';
 import Navbar from './components/Navbar';
 import AboutSection from './components/AboutSection';
+import Footer from './components/Footer';
 
 const projects = [
   {
@@ -19,10 +20,11 @@ const projects = [
 const App = () => {
   return (
     <div className="App">
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
       <ProjectsSection projects={projects} />
       <AboutSection />
+      <Footer>Copyright © Designed & coded by André Santos</Footer>
     </div>
   );
 }
