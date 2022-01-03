@@ -1,5 +1,4 @@
 import './HeroSection.scss';
-import ComputerVideo from '../video.mp4';
 import AnimateOnScroll from './AnimateOnScroll';
 
 const HeroSection = () => {
