@@ -6,20 +6,20 @@ import AboutSection from './components/AboutSection';
 
 const projects = [
   {
-      target: 'Client project',
-      title: 'ARcade Sports',
-      description: `Designed the website as well as seperate sections the client requested.
+    target: 'Client project',
+    title: 'ARcade Sports',
+    description: `Designed the website as well as seperate sections the client requested.
       Created and implemented wordpress theme and components.`,
-      role: 'Developer, Designer',
-      tech: 'HTML    CSS    Wordpress    PHP',
-      link: 'arcadesports.io'
+    role: 'Developer, Designer',
+    tech: 'HTML    CSS    Wordpress    PHP',
+    link: 'arcadesports.io'
   }
 ]
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
       <ProjectsSection projects={projects} />
       <AboutSection />

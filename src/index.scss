@@ -89,7 +89,12 @@ body { counter-reset: section;}
   width: 100%;
   max-width: 1350px;
   margin: auto;
-  padding: 30px;
+  margin-bottom: 10rem;
+  // min-height: 100vh;
+  @media (max-width:$breakpoint-md) {
+    padding: 30px;
+  }
+  padding: 50px;
   box-sizing: border-box;
 }
 // * {

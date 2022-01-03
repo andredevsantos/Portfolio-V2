@@ -1,28 +1,28 @@
 @import '../variables';
 
 .about-section {
-    max-width: 1200px;
+    // max-width: 1200px;
     .about-section-content {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: start;
         @media (max-width: 768px) {
-            flex-direction: column;
+            flex-direction: column-reverse;
             justify-content: space-between;
         }
         .about-text {
             @media (max-width: 768px) {
-                flex-direction: column;
-                margin-right: 0px;
+                
+                margin-left: 0px;
             }
             // max-width: 600px;
-            margin-right: 80px;
+            margin-left: 80px;
             .about-tech {
                 // flex-wrap: wrap;
                 div {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(147px, 1fr));
                     grid-auto-flow: dense;
                     @media (max-width: 768px) { justify-items: center; }
                     // grid-gap: 1rem;
