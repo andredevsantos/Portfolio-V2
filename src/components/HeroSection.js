@@ -35,7 +35,7 @@ const HeroSection = () => {
             initial="hidden"
             animate="show">
             <motion.div className='hero-text col secondary-white'>
-                <motion.p variants={variants} className='p-large'>Oi there, I'm</motion.p>
+                <motion.p variants={variants} className='p-large'>Hi, I'm</motion.p>
                 <motion.h1 variants={variants} className='primary-white'>André Santos</motion.h1>
                 <motion.p variants={variants} className='p-large'>I'm an artist turned<span><strong className='primary-blue'> Front-end Developer </strong></span>
                     based in<strong> Lisbon, Portugal </strong> passionate about solving creative and technical problems.</motion.p>

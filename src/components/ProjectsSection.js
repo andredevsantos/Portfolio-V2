@@ -42,8 +42,8 @@ const projects = [
         title: 'Personal 3D Projects',
         description: `A collection of personal 3D projects from 2017 to 2020`,
         role: '3D Artist',
-        tech: ['3ds Max', 'Substance Painter/Designer', 'Unity', 'PHP'],
-        link: 'https://www.artstation.com/andrecsi',
+        tech: ['3ds Max', 'Substance Painter/Designer', 'Unity', 'ZBrush'],
+        link: 'artstation.com/andrecsi',
         image: publicURL + '/images/3dprojects.png'
     }
 ]
