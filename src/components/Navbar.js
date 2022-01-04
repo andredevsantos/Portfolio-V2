@@ -2,22 +2,61 @@ import logo from '../resources/my-logo.png'
 import './Navbar.scss'
 import StickyNav from './StickyNavbar'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { CgMenuCheese } from 'react-icons/cg'
+import { useState } from 'react'
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const CloseNav = () => {
+        console.log("clicked")
+        setIsOpen(false);
+    }
+    const ToggleNav = () => {
+        console.log("clicked")
+        setIsOpen(!isOpen);
+    }
+
     return (
-        <div className='flex-horizontal'>
-            <StickyNav length='70'>
-                <div className="navbar-logo">
-                    <img src={logo} alt="André Santos logo" />
+        <>
+            <div className='flex-horizontal big-nav'>
+                <StickyNav length='70'>
+                    <div className="navbar-logo">
+                        <AnchorLink href="#home">
+                            <img src={logo} alt="André Santos logo" />
+                        </AnchorLink>
+                    </div>
+                    <ul className="navbar-links">
+                        <AnchorLink href='#projects'><li>Projects</li></AnchorLink>
+                        <AnchorLink href='#about'><li>About me</li></AnchorLink>
+                        <AnchorLink href='#footer'><li>Contact</li></AnchorLink>
+                        <button className="navbar-button">Resume</button>
+                    </ul>
+                </StickyNav>
+            </div>
+            <div className='nav mobile-nav'>
+                <div className={(!isOpen ? 'hiddenNav ' : '') + 'navbar-links-mobile'}>
+                    <ul className="navbar-links">
+                        <AnchorLink onClick={CloseNav} href='#projects'><li>Projects</li></AnchorLink>
+                        <AnchorLink onClick={CloseNav} href='#about'><li>About me</li></AnchorLink>
+                        <AnchorLink onClick={CloseNav} href='#footer'><li>Contact</li></AnchorLink>
+                        <button className="navbar-button">Resume</button>
+                        <div onClick={CloseNav} className='preventScroll'></div>
+                    </ul>
                 </div>
-                <ul className="navbar-links">
-                    <AnchorLink href='#projects'><li>Projects</li></AnchorLink>
-                    <AnchorLink href='#about'><li>About me</li></AnchorLink>
-                    <AnchorLink href='#projects'><li>Contact</li></AnchorLink>
-                    <button className="navbar-button">Resume</button>
-                </ul>
-            </StickyNav>
-        </div>
+                <div className='flex-horizontal visible-nav'>
+                    <div className="navbar-logo">
+                        <AnchorLink onClick={CloseNav} href="#home">
+                            <img src={logo} alt="André Santos logo" />
+                        </AnchorLink>
+                    </div>
+                    <div>
+                        <a onClick={ToggleNav}>
+                            <CgMenuCheese />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 

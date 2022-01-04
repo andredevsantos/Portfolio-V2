@@ -30,7 +30,7 @@ const variants = {
 
 const HeroSection = () => {
     return (
-        <motion.div className='hero-section'
+        <motion.div id='home' className='hero-section'
             variants={motionContainer}
             initial="hidden"
             animate="show">

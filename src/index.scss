@@ -9,12 +9,17 @@ html {
   color: $primary-white;
 } /*16px*/
 
+* {
+
+}
+
 body {
   background: $dark-blue;
   // background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   // background-image: url('./resources/stardust.png');
   // background-size: 800px;
-  //background-color: $dark-blue;
+  background-color: $dark-blue;
+  // background-image: linear-gradient(to top, #112F4A 0%, #112F4A 1%, #112a4a 100%);
   margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -86,6 +91,9 @@ h4 {
   font-size: 1rem;
   line-height: 1.7;
   color: $secondary-white;
+  @media (max-width: $breakpoint-sm) {
+    // font-size: 0.938rem
+  }
 }
 
 .primary-blue {
@@ -148,7 +156,7 @@ body {
   width: 100%;
   max-width: 1350px;
   margin: auto;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   // min-height: 100vh;
   @media (max-width: $breakpoint-md) {
     padding: 30px;
@@ -160,10 +168,16 @@ body {
 a {
   text-decoration: none;
   transition: 0.25s;
+  color: inherit;
   &:hover {
     opacity: 0.6;
   }
 }
+
+.hidden {
+  display: none!important;
+}
+
 // * {
 //   outline: 1px solid #f00 !important;
 // }

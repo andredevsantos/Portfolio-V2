@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 @include keyframes(top-reveal) {
     from {
@@ -7,10 +7,95 @@
     to {
         transform: translateY(0);
     }
-  }
-  @mixin top-reveal {
+}
+@mixin top-reveal {
     @include animate(top-reveal, 0.1s, 1, normal, ease);
-  }
+}
+@media (min-width: $breakpoint-lg) {
+    .big-nav {
+        display: flex!important;
+    }
+}
+
+.big-nav {
+    display: none;
+}
+
+.mobile-nav {
+    @media (max-width: $breakpoint-lg) {
+        display: flex!important;
+    }
+    display: none!important;
+    z-index: 999;
+    position: fixed !important;
+    background: rgba($dark-blue, 0.8);
+    backdrop-filter: blur(20px);
+    // box-shadow: 0px 10px 17px -11px #00000069;
+    transition: 0.25s;
+    padding: 10px 40px;
+    // height: 30px!important;
+    .navbar-logo {
+        transform: scale(1);
+    }
+    // overflow-x: hidden;
+    .visible-nav {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        svg {
+            transform: scale(2.7);
+            color: $primary-blue;
+        }
+        position: relative;
+        z-index: 99;
+    }
+    .navbar-links-mobile {
+        transform: translateX(0%);
+        transition: 0.5s;
+        z-index: 1;
+        min-height: 100vh;
+        min-width: 70vw;
+        position: fixed;
+        background: rgba($dark-blue, 0.95);
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(20px);
+        box-shadow: -20px 0px 40px -11px #00000059;
+        .navbar-links {
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            min-height: 60vh;
+        }
+        button {
+            margin: 0!important;
+        }
+    }
+}
+
+.hiddenNav {
+    box-shadow:none!important;
+    // display: none!important;
+    transform: translateX(100%) !important;
+    .preventScroll {
+        left: 0;
+    }
+}
+
+.preventScroll {
+    z-index: -1;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -30vw;
+    // pointer-events: none;
+    // background: red;
+
+}
 
 .nav {
     position: absolute;
@@ -26,7 +111,7 @@
     align-items: center;
     counter-reset: link;
     transition: 0.1s;
-    
+
     .navbar-logo {
         height: 100%;
 
@@ -43,9 +128,15 @@
         padding: 0;
         align-items: center;
         margin: 0;
-        
+
         li {
             &::before {
+                @media (max-width: $breakpoint-lg) {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+
                 counter-increment: link;
                 content: "0" counter(link) ". ";
                 color: $primary-blue;

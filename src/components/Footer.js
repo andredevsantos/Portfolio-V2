@@ -6,7 +6,7 @@ import { SiGithub, SiInstagram, SiItchdotio, SiLinkedin } from 'react-icons/si';
 const Footer = (props) => {
     return (
         <footer>
-            <div className='footer-logo'>
+            <div id="footer" className='footer-logo'>
                 <img src={logo} alt="André Santos logo" />
             </div>
 
