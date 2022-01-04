@@ -5,6 +5,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { CgMenuCheese } from 'react-icons/cg'
 import { useState } from 'react'
 
+const publicURL = process.env.PUBLIC_URL;
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const CloseNav = () => {
@@ -29,7 +31,7 @@ const Navbar = () => {
                         <AnchorLink href='#projects'><li>Projects</li></AnchorLink>
                         <AnchorLink href='#about'><li>About me</li></AnchorLink>
                         <AnchorLink href='#footer'><li>Contact</li></AnchorLink>
-                        <button className="navbar-button">Resume</button>
+                        <a href={publicURL + "/images/andresantosCV.pdf"} target='_blank' download="AndreSantosCV"><button className="navbar-button">Resume</button></a>
                     </ul>
                 </StickyNav>
             </div>
@@ -39,7 +41,7 @@ const Navbar = () => {
                         <AnchorLink onClick={CloseNav} href='#projects'><li>Projects</li></AnchorLink>
                         <AnchorLink onClick={CloseNav} href='#about'><li>About me</li></AnchorLink>
                         <AnchorLink onClick={CloseNav} href='#footer'><li>Contact</li></AnchorLink>
-                        <button className="navbar-button">Resume</button>
+                        <a href={publicURL + "/images/andresantosCV.pdf"} target='_blank' download="AndreSantosCV"><button className="navbar-button">Resume</button></a>
                         <div onClick={CloseNav} className='preventScroll'></div>
                     </ul>
                 </div>

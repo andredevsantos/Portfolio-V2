@@ -8,6 +8,15 @@ const publicURL = process.env.PUBLIC_URL;
 
 const projects = [
     {
+        type: 'Personal project',
+        title: 'React Portfolio',
+        description: `A straightforward portfolio website built using React and Sass. I built this website with the purpose of using it as my personal hub to showcase mostly my Front-end and Design work. Ended up building different versions, one using Tailwind and another using Sass.`,
+        role: 'Developer, Designer',
+        tech: ['React', 'Sass', 'Framer'],
+        link: 'andresantos.dev',
+        image: publicURL + '/images/portfoliowebsite.png'
+    },
+    {
         type: 'Client project',
         title: 'ARcade Sports',
         description: `Designed the website as well as separate sections the client requested.
@@ -27,15 +36,6 @@ const projects = [
         tech: ['HTML', 'Sass', 'Javascript'],
         link: 'sexonwheels.net',
         image: publicURL + '/images/sexonwheels.png'
-    },
-    {
-        type: 'Personal project',
-        title: 'React Portfolio',
-        description: `A straightforward portfolio website built using React and Sass. I built this website with the purpose of using it as my personal hub to showcase mostly my Front-end and Design work. Ended up building different versions, one using Tailwind and another using Sass.`,
-        role: 'Developer, Designer',
-        tech: ['React', 'Sass', 'Framer'],
-        link: 'andresantos.dev',
-        image: publicURL + '/images/portfoliowebsite.png'
     },
     {
         type: 'Personal Project',
