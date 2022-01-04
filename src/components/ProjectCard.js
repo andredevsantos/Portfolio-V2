@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
         <FadeInWhenVisible>
             <div className={`project-card ${props.alternate && 'alternate'}`}>
                 <div className='project-card-thumbnail'>
-                    <img src={props.project.image} alt="" srcset="" />
+                    <a href={props.project.link} target='_blank'><img src={props.project.image} alt="" srcset="" /></a>
                 </div>
                 <div className='project-card-text'>
                     <img src={props.project.image} alt="" />
@@ -19,10 +19,9 @@ const ProjectCard = (props) => {
                     <p className='p-small'>{props.project.description}</p>
                     <small><strong>Role:</strong> {props.project.role}</small>
                     <ul className="project-tech primary-blue p-small">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Wordpress</li>
-                        <li>PHP</li>
+                        {
+                            props.project.tech.map(tech => <li>{tech}</li>)
+                        }
                     </ul>
                     <IconContext.Provider value={{ color: "#bdbdbd" }}>
                         <small><a href={"http://" + props.project.link} target="_blank">{props.project.link} <FaExternalLinkAlt /></a></small>

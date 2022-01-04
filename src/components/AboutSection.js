@@ -21,14 +21,15 @@ const AboutSection = () => {
                     </motion.div>
                     <motion.div className="about-text">
                         <p>Hi! I’m André.</p>
-                        <p>My interest for web development started as a teenager when I first looked up how to customize MyAnimeList profile, leading me to learn HTML and CSS.</p>
-                        <p>I graduated with a degree in Game Development and started working as a 3D Artist.
-                            I’m now looking to switch careers into Web Development.</p>
+                        <p>My interest for web development started as a teenager when I first looked up how to customize my social media profiles, leading me to learn HTML and CSS.</p>
+                        <p>Fast forward to toady and I graduated with a degree in Game Development, worked in various different fields from graphics design to AR development.</p>
+                        <p>Later on I started working I chose to work as 3D Artist while doing web development freelance on the side.</p>
+                        <p>I’m now in the process of pursuing a career in Web Development and Design.</p>
                         <p>Some of the technologies I work with are:</p>
                         <div className='about-tech'>
                             <div>
                                 <p><SiReact />React</p>
-                                <p><SiJavascript />Javascript</p>
+                                <p><SiJavascript />Javascript (ES6+)</p>
                                 <p><SiCsharp />C#</p>
                                 <p><FaSass />Sass</p>
                                 <p><FaBootstrap />Bootstrap</p>
