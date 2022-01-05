@@ -20,7 +20,7 @@ const projects = [
         type: 'Client project',
         title: 'ARcade Sports',
         description: `Designed the website as well as separate sections the client requested.
-        Created and implemented wordpress theme and components`,
+        Created and implemented wordpress theme and components.`,
         role: 'Developer, Designer',
         tech: ['HTML', 'CSS', 'Wordpress', 'PHP'],
         link: 'arcadesports.io',
@@ -40,7 +40,7 @@ const projects = [
     {
         type: 'Personal Project',
         title: 'Personal 3D Projects',
-        description: `A collection of personal 3D projects from 2017 to 2020`,
+        description: `A collection of personal 3D projects from 2017 to 2020.`,
         role: '3D Artist',
         tech: ['3ds Max', 'Substance Painter/Designer', 'Unity', 'ZBrush'],
         link: 'artstation.com/andrecsi',
