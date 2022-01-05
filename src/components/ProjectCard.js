@@ -10,7 +10,7 @@ const ProjectCard = (props) => {
         <FadeInWhenVisible>
             <div className={`project-card ${props.alternate && 'alternate'}`}>
                 <div className='project-card-thumbnail'>
-                    <a href={props.project.link} target='_blank'><img src={props.project.image} alt="" srcset="" /></a>
+                    <a href={"http://" + props.project.link} target='_blank'><img src={props.project.image} alt="" srcset="" /></a>
                 </div>
                 <div className='project-card-text'>
                     <img src={props.project.image} alt="" />
