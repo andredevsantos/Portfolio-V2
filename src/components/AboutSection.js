@@ -1,5 +1,5 @@
 import SectionTitle from './SectionTitle';
-import AboutImage from '../resources/aboutImg.jpg';
+import AboutImage from '../resources/aboutImg.webp';
 import './AboutSection.scss'
 import { SiReact, SiJavascript, SiCsharp, SiUnity, SiFirebase, SiTailwindcss, SiFigma } from 'react-icons/si';
 import { FaBootstrap, FaSass } from 'react-icons/fa';
@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
     return (
 
-        <div id="about" className="about-section section">
+        <section id="about" className="about-section">
             <FadeInWhenVisible>
                 <SectionTitle>A little more about me</SectionTitle>
             </FadeInWhenVisible>
@@ -41,7 +41,7 @@ const AboutSection = () => {
                     </motion.div>
                 </div>
             </FadeInWhenVisible>
-        </div>
+        </section>
     )
 }
 

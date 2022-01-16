@@ -2,7 +2,6 @@ import ProjectCard from './ProjectCard';
 import './ProjectsSection.scss'
 import SectionTitle from './SectionTitle';
 import FadeInWhenVisible from './animation/FadeInWhenVisible';
-import { motion } from "framer-motion";
 
 const publicURL = process.env.PUBLIC_URL;
 
@@ -60,14 +59,14 @@ const ProjectsSection = () => {
     }
     
     return (
-        <div id="projects" className="projects-section section">
+        <section id="projects" className="projects-section">
             <FadeInWhenVisible>
                 <SectionTitle>Projects</SectionTitle>
             </FadeInWhenVisible>
             {projects.map(project => (
                 ProjectCardCreator(project)
             ))}
-        </div>
+        </section>
     )
 }
 
